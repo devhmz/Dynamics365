@@ -1,0 +1,42 @@
+Open Visual Studio as administrator.
+
+2. From the File menu, select New > Project. Select Dynamics 365 on the left pane. select Finance middle pane. Enter Reporting Project in the Name field. Select OK.
+3. In the Solution Explorer, right-click your project node, and then select Add > New Item.
+4. Select Data Model and then select Query.
+5. For the Name field, enter FMVehicleModelQuery and then select Add.
+6. Open the Application Explorer view, if it is not already open.
+7. In the AOT, open Data Model > Tables, and then select and drag FMVehicleModel table to the dat query.
+8. In the properties of the QueryRootDataSource FMVehicleModel, set the Dynamic Fields property
+9. Select Save all.
+10. Right-click the Project and build (Ctrl+ Shift + B).
+
+
+2. Select the Reports node on the left pane and then select Report on the middle pane.
+3. In the Name field, type FMVehicleModelReport and then select Add.
+4. Right-click the Datasets node and then select New Data Set.
+5. In Properties, set the Dynamic Filters property to True.
+6. Enter FMVehicleModelDS in the Name property.
+7. Select the Query property and then select the ellipsis ( ) to view a list of Queries.
+8. On the Select a Query page, select EMVehicleModelQuery and then select Next.
+9. Select the All Fields check box and then select OK.
+10. Drag and drop FMVehicleModelDS from the Datasets node to the Designs node.
+11. On the Designs node, expand the newly created AutoDesign1.
+12. Expand the FMVehicleModelDSTable1.
+13. On the Datasets node, expand the FMVehicleModelDS.
+14. Expand the Fields node if it is not already expanded.
+15. Drag and drop Make_ Make from the Fields node to Designs > AutoDesign1 > FMVehicleMode Groupings.
+16. Save all.
+17. Right-click Solution and build (Ctrl + Shift + B).
+18. In the Solution Explorer, right-click FMVehicleModelReport and then select Deploy Reports.
+
+1. In the Solution Explorer, right-click your project node and then select Add > New Item.
+2. Select User Interface and then select Output Menu Item.
+3. Name the Output menu item FMVehicleModelReport and then select Add.
+4. Drag the FMVehicleModelReport report from the Solution explorer onto the Menu Item that
+5. Save all.
+6. Right-click Solution and build (Ctr|+ Shift + B).
+
+
+1. In the Solution explorer, select the FMVehicleModelReport Output menu item, and then righ Startup object.
+2. Select Start on the Standard Toolbar in Visual Studio.
+3. Select Ctrl+F5 to run the menu item.
