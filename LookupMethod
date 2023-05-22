@@ -1,0 +1,35 @@
+internal final class AvaVendTableExtensionCategoryLookup
+{
+
+    
+
+
+    /// <summary>
+    ///
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    [FormControlEventHandler(formControlStr(VendTable, Category), FormControlEventType::Lookup)]
+    public static void Category_OnLookup(FormControl sender, FormControlEventArgs e)
+    {
+
+        SysTableLookup sysTableLookup = SysTableLookup::newParameters(tableNum(Categorie),sender);
+
+
+        //Add the lookup columns
+        SysTableLookup.addlookupfield(fieldNum(Categorie, CategorieID));
+        SysTableLookup.addlookupfield(fieldNum(Categorie, Description));
+
+        //Run the lookup
+        SysTableLookup.performFormLookup();
+
+
+        //Cancel the coli to super() tp prevenet the system from trying to show
+        // The lookup from twice and cause an error
+        FormControlCancelableSuperEventArgs cancelableSuperEventArgs = e as FormControlCancelableSuperEventArgs;
+        CancelableSuperEventArgs.CancelSuperCall();
+
+
+
+    }
+}
