@@ -1,0 +1,1 @@
+Import-D365ExternalUser -Id "prenom.nom" -Name "prénom Nom" -Email "prenom.nom@company.com" -Company "Company"
