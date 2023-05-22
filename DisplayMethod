@@ -1,0 +1,18 @@
+[ExtensionOf(tableStr(PurchReqLine))]
+[SysClientCacheDataMethodAttribute(true)]  //This attribute will cache your display method.
+public final class PurchReqLine_Extension
+{
+
+
+    public display str getFamily()
+    {
+        return VendTable::find(this.VendAccount).FamilleOdigo; //add return statement
+    
+    }
+
+    public display str getCategory()
+    {
+        return VendTable::find(this.VendAccount).CategoryOdigo; //add return statement
+    }
+
+}
