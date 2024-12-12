@@ -1,0 +1,21 @@
+Data integration patterns: 
+
+Federation: 
+
+This pattern involves creating a virtual database that integrates data from multiple sources without moving the data.
+It allows users to query and manipulate  data as if it were in a single database1.
+
+Broadcast: 
+
+Also known as "one-way sync from one to many," this pattern involves moving data from a single source to multiple destination systems in real-time or near real-time. 
+It ensures that data is consistently updated across all systems2.
+
+Consolidation:
+
+This pattern involves combining data from multiple sources into a single, unified repository.
+It is often used for data warehousing, where data from various systems is aggregated for analysis and reporting1.
+
+Correlation:
+
+This pattern identifies the intersection of two data sets and performs bi-directional synchronization only for the items that exist in both systems. 
+It ensures that data is consistent and up-to-date across systems2.
