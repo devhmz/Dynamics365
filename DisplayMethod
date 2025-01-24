@@ -6,13 +6,13 @@ public final class PurchReqLine_Extension
 
     public display str getFamily()
     {
-        return VendTable::find(this.VendAccount).FamilleOdigo; //add return statement
+        return VendTable::find(this.VendAccount).Famille; //add return statement
     
     }
 
     public display str getCategory()
     {
-        return VendTable::find(this.VendAccount).CategoryOdigo; //add return statement
+        return VendTable::find(this.VendAccount).Category; //add return statement
     }
 
 }
